@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML & Web Structure Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+ </head>
+ <body>
+  <!-- ══ INTRO ══ -->
+  <section id="intro" class="screen active">
+   <div class="intro-badge">
+    <svg
+     width="12"
+     height="12"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2.5"
+    >
+     <polyline points="16 18 22 12 16 6" />
+     <polyline points="8 6 2 12 8 18" />
+    </svg>
+    HTML &amp; Web Structure Quiz
+   </div>
+
+   <h1>
+    How well do you
+    <br />
+    know
+    <span class="hl">HTML?</span>
+   </h1>
+
+   <p class="intro-desc">
+    Semantic tags, accessibility, performance,
+    <br />
+    and web structure — put your skills to the test.
+   </p>
+
+   <div class="stat-row">
+    <div class="stat-card">
+     <strong id="total-q">30</strong>
+     <span>Questions</span>
+    </div>
+    <div class="stat-card">
+     <strong>20s</strong>
+     <span>Per Q</span>
+    </div>
+    <div class="stat-card">
+     <strong>3</strong>
+     <span>Levels</span>
+    </div>
+   </div>
+
+   <div class="diff-wrap">
+    <span class="diff-label">Difficulty</span>
+    <div class="diff-group">
+     <button class="diff-btn active" data-diff="all">All</button>
+     <button class="diff-btn" data-diff="easy">Easy</button>
+     <button class="diff-btn" data-diff="medium">Medium</button>
+     <button class="diff-btn" data-diff="hard">Hard</button>
+    </div>
+   </div>
+
+   <button class="btn btn-primary" id="start-btn">Start Quiz →</button>
+  </section>
+
+  <!-- ══ QUIZ ══ -->
+  <section id="quiz" class="screen">
+   <div class="quiz-bar">
+    <span class="q-counter">
+     Question
+     <strong id="q-num">1</strong>
+     /
+     <strong id="q-total">30</strong>
+    </span>
+    <span class="score-live" id="live-score">⭐ 0</span>
+   </div>
+
+   <div class="progress-track">
+    <div class="progress-fill" id="progress-fill"></div>
+   </div>
+
+   <div class="timer-row">
+    <span class="timer-num" id="timer-num">20s</span>
+    <div class="timer-track">
+     <div class="timer-fill" id="timer-fill"></div>
+    </div>
+   </div>
+
+   <div class="q-card">
+    <span class="diff-badge" id="diff-badge">easy</span>
+    <p class="q-text" id="q-text"></p>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+   </div>
+
+   <div class="next-row">
+    <button class="btn btn-primary" id="next-btn" style="display: none">
+     Next →
+    </button>
+   </div>
+  </section>
+
+  <!-- ══ RESULTS ══ -->
+  <section id="results" class="screen">
+   <div class="result-icon" id="result-icon">🎯</div>
+   <h2 class="result-title" id="result-title">Well Done!</h2>
+
+   <div class="result-ring">
+    <svg width="140" height="140" viewBox="0 0 140 140">
+     <circle class="ring-bg" cx="70" cy="70" r="56" />
+     <circle class="ring-fill" id="ring-fill" cx="70" cy="70" r="56" />
+    </svg>
+    <div class="ring-label">
+     <span class="ring-pct" id="ring-pct">0%</span>
+     <span class="ring-sub">score</span>
+    </div>
+   </div>
+
+   <p class="result-msg" id="result-msg"></p>
+
+   <div class="breakdown">
+    <div class="bd-item green">
+     <strong id="bd-correct">0</strong>
+     <span>Correct</span>
+    </div>
+    <div class="bd-item red">
+     <strong id="bd-wrong">0</strong>
+     <span>Wrong</span>
+    </div>
+    <div class="bd-item blue">
+     <strong id="bd-skipped">0</strong>
+     <span>Skipped</span>
+    </div>
+   </div>
+
+   <div class="result-actions">
+    <button class="btn btn-primary" id="retry-btn">Try Again</button>
+    <button class="btn btn-ghost" id="home-btn">← Home</button>
+   </div>
+  </section>
+
+  <script src="questions.js"></script>
+  <script src="main.js"></script>
+ </body>
+</html>
