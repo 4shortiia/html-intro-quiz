@@ -5,8 +5,8 @@ let questions = [],
     skipped = 0;
 let answered = false,
     timer = null,
-    timeLeft = 20;
-const TIME_LIMIT = 20;
+    timeLeft = 30;
+const TIME_LIMIT = 30;
 
 const $ = (id) => document.getElementById(id);
 const screens = { intro: $("intro"), quiz: $("quiz"), results: $("results") };
